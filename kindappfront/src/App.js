@@ -10,9 +10,7 @@ function App() {
     <>
   <div>
       <header>
-        <h1>
-          <a href="/">Welcome to Kind.</a>
-        </h1>
+        <h1>Welcome to Kind</h1>
       </header>
       <div>
       <Container fluid>
@@ -20,7 +18,7 @@ function App() {
     <Col>
     <main>
         <Route path="/" exact component={Landing}/>
-        <Route path="/details/:id" exact component={OpportunityDetail} />
+        {/* <Route path="/details/:id" exact component={OpportunityDetails} /> */}
     </main>
       </Col>
   </Row>
