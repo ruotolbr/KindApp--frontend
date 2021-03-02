@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import Card from 'react-bootstrap';
 // import Button from 'react-bootstrap/esm/Button'
-import { Card, Button } from 'react-bootstrap';
+import Button from 'react-bootstrap';
 import placeholder from "../placeholderimg.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -22,7 +23,7 @@ function OpportunityCard(props) {
         <Card style={{ width: "18rem" }} className="adding-margin">
           <Card.Img variant="top" src={placeholder} />
           <Card.Body>
-            <Card.Title></Card.Title>
+            <Card.Title>Chicago</Card.Title>
             <Card.Text>
               <section className="container">
             {posts.map((post) => {
@@ -34,7 +35,7 @@ function OpportunityCard(props) {
             })} 
       </section>
             </Card.Text>
-            <Button className="save-button" variant="dark"> Button</Button>
+            <Button variant="dark"> Button</Button>
           </Card.Body>
         </Card>
         

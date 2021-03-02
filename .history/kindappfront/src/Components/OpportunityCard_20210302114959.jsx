@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-// import Button from 'react-bootstrap/esm/Button'
-import { Card, Button } from 'react-bootstrap';
-import placeholder from "../placeholderimg.jpg";
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import Card from 'react-bootstrap/esm/Card'
+import Button from 'react-bootstrap/esm/Button'
 
 function OpportunityCard(props) {
     const [posts, setPosts] = useState([]);
@@ -22,19 +19,26 @@ function OpportunityCard(props) {
         <Card style={{ width: "18rem" }} className="adding-margin">
           <Card.Img variant="top" src={placeholder} />
           <Card.Body>
-            <Card.Title></Card.Title>
+            <Card.Title>Chicago</Card.Title>
             <Card.Text>
               <section className="container">
             {posts.map((post) => {
         return(
             <Link to={`/details/${posts.id}`} key={posts.id}>
-             <h3>{posts.title}</h3>
+            <div className="card">
+                <div className="card-image">
+                    
+            </div>
+                <div className="card-title">
+                    <h3>{posts.title}</h3>
+                </div>
+            </div>
           </Link>
             );
             })} 
       </section>
             </Card.Text>
-            <Button className="save-button" variant="dark"> Button</Button>
+            <Button variant="dark"> Button</Button>
           </Card.Body>
         </Card>
         

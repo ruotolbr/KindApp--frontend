@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function OpportunityDetails(props) {
+function BirdDetails(props) {
     const [task, setTask ] = useState(null);
     
     

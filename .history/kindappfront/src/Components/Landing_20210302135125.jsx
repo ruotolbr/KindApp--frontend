@@ -25,17 +25,17 @@ const LandingPage = () => {
             </div>
             <div className="cards-container">
             <Container>
-                <Row className="adding-margin">
+                <Row>
             
                 <OpportunityCard /> 
-                {/* <OpportunityCard />
-                <OpportunityCard /> */}
+                <OpportunityCard />
+                <OpportunityCard />
             
                 </Row>
                 <Row>
-                 {/* <OpportunityCard />
+                 <OpportunityCard />
                 <OpportunityCard />
-                <OpportunityCard />     */}
+                <OpportunityCard />    
                 </Row>
                 
             

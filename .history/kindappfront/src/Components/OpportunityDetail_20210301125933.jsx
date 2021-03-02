@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-function OpportunityDetails(props) {
+function BirdDetails(props) {
     const [task, setTask ] = useState(null);
     
     
         useEffect(() => {
             fetch(
-              `http://localhost:8000/posts`
+              `https://audubon-api.herokuapp.com/api/birds/${props.match.params.id}`
           )
             .then((res) => res.json())
             .then((res) => setTask(res))

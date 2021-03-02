@@ -19,19 +19,19 @@ function OpportunityCard(props) {
     }, []);
     
     return (
-        <Card style={{ width: "18rem" }} className="adding-margin">
-          <Card.Img variant="top" src={placeholder} />
-          <Card.Body>
-            <Card.Title></Card.Title>
-            <Card.Text>
+        
               <section className="container">
             {posts.map((post) => {
-        return(
-            <Link to={`/details/${posts.id}`} key={posts.id}>
+        return(<Card style={{ width: "18rem" }} className="adding-margin">
+          <Card.Img variant="top" src={placeholder} />
+          <Card.Body>
+            <Card.Title><Link to={`/details/${posts.id}`} key={posts.id}>
              <h3>{posts.title}</h3>
           </Link>
             );
-            })} 
+            })} </Card.Title>
+            <Card.Text>
+            
       </section>
             </Card.Text>
             <Button className="save-button" variant="dark"> Button</Button>

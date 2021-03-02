@@ -22,13 +22,13 @@ function OpportunityCard(props) {
         <Card style={{ width: "18rem" }} className="adding-margin">
           <Card.Img variant="top" src={placeholder} />
           <Card.Body>
-            <Card.Title></Card.Title>
+            <Card.Title>{posts.title}</Card.Title>
             <Card.Text>
               <section className="container">
             {posts.map((post) => {
         return(
             <Link to={`/details/${posts.id}`} key={posts.id}>
-             <h3>{posts.title}</h3>
+             <h3></h3>
           </Link>
             );
             })} 

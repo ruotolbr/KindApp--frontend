@@ -20,12 +20,12 @@ function App() {
     <Col>
     <main>
         <Route path="/" exact component={Landing}/>
-        <Route path="/details/:id" exact component={OpportunityDetail} />
+        {/* <Route path="/details/:id" exact component={OpportunityDetail} /> */}
     </main>
       </Col>
   </Row>
 </Container>
-    </div>
+  </div>
  </div>     
     </>
   );

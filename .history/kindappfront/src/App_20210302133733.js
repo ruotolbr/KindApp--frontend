@@ -8,25 +8,23 @@ function App() {
   
   return (
     <>
-  <div>
+
       <header>
         <h1>
           <a href="/">Welcome to Kind.</a>
         </h1>
       </header>
-      <div>
       <Container fluid>
-  <Row className="adding-margin">
+  <Row>
     <Col>
     <main>
         <Route path="/" exact component={Landing}/>
-        <Route path="/details/:id" exact component={OpportunityDetail} />
+        {/* <Route path="/details/:id" exact component={OpportunityDetail} /> */}
     </main>
       </Col>
   </Row>
 </Container>
-    </div>
- </div>     
+      
     </>
   );
 }
