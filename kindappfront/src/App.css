@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background: white;
   display: grid;
   grid-template-columns: 0.6fr 1fr;
   grid-template-rows: 1fr;
@@ -15,4 +14,23 @@
 
 .save-button{
   background-color: blue;
+}
+.fh-pic{
+  width: 50%;
+
+}
+span{
+  display: inline-block;
+}
+.readmore{
+  font-size: 40px;
+}
+.details{
+  font-size: 20px;
+}
+.cards-title{
+  font-size: 18px;
+}
+.navbar{
+  background-color: greenyellow;
 }

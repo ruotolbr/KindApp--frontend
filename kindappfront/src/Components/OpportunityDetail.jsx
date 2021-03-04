@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import fhpic from '../fhpic.jpg'
 
 function OpportunityDetails(props) {
     const [task, setTask ] = useState(null);
@@ -6,7 +7,7 @@ function OpportunityDetails(props) {
     
         useEffect(() => {
             fetch(
-              `http://localhost:8000/posts`
+              `https://kindapp-backend.herokuapp.com/post/${props.match.params.id}`
           )
             .then((res) => res.json())
             .then((res) => setTask(res))
@@ -19,19 +20,18 @@ function OpportunityDetails(props) {
         console.log(task, 'task')
         return (
           task != null &&
-            (<div className="details-container">
-            <img
-              src={task.image}
-              alt={task.name}
-            />
+            (<div className="details-container">  
+            <span>
+              <img className='fh-pic'
+              src={fhpic}
+              alt={task.title}
+              />
+            </span>
             <div className="details">
-              <p>test</p>
-              <h2>{task.name}</h2>
-              <h3>({task.genus})</h3>
-              <h4>Conservation Status</h4>
-              <p>{task.conservationStatus}</p>
-              <a
-                href={task.homepage} target='_blank' rel='noopener noreferrer'>
+              <h2>{task.title}</h2>
+              <p>{task.description}</p>
+              <a className='readmore'
+                href={task.url} target='_blank' rel='noopener noreferrer'>
                 Read More
               </a>
             </div>
@@ -39,4 +39,4 @@ function OpportunityDetails(props) {
         );
     }
     
-    export default BirdDetails;
+    export default OpportunityDetails;
