@@ -45,7 +45,7 @@ function OpportunityCard({ data }) {
         <Link to={`/details/${data.id}`} key={data.id}>
         <Button className="save-button" variant="dark">
           {" "}
-          Button
+          More Info
         </Button>
         </Link>
       </Card.Body>

@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Route} from 'react'
 import OpportunityCard from './OpportunityCard'
 import project from '../APIs/project'
 import { Container, Row, Col } from 'react-bootstrap';
 import Nav from './Nav'
+import Profile from './Profile'
+
 
 const LandingPage = ({ posts, setPosts }) => {
     // const [projectInfo, setProjectInfo] = useState([]);
@@ -19,9 +21,13 @@ const LandingPage = ({ posts, setPosts }) => {
 
     return (
         <>
+            <div>
+            <header>
+                <Profile />
+            </header>
+            </div>
             <div className="ui center aligned container">
             <Nav />
-
             </div>
             <div className="cards-container">
 
