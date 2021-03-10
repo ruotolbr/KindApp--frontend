@@ -8,6 +8,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css"
 
 function OpportunityCard({ data }) {
+
+
+  
   //   const [posts, setPosts] = useState([]);
 
   //   const fetchPosts  = async () =>{

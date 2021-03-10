@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import project from "../APIs/project"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Form, FormGroup, Button, Row, Col, Container} from 'react-bootstrap';
 import "../App.css"
@@ -6,7 +7,7 @@ import formpic from "../formpic.jpg"
 
 
 
-function OpportunityCreate({ data }) {
+function OpportunityCreate({ posts, setPosts }) {
   const initialState = {
       title: '',
       Cause_type: '', 
@@ -16,6 +17,16 @@ function OpportunityCreate({ data }) {
   };
   const [formState, setFormState] = useState(initialState);
 
+  const fetchProjects = async () => {
+
+    var response = await project.get('https://kindapp-backend.herokuapp.com/post/create')
+    setPosts(response.data)
+    console.log(response)
+}
+
+useEffect(() => {
+  fetchProjects()
+}, [])
   
 
 
@@ -45,8 +56,11 @@ function OpportunityCreate({ data }) {
 
     return (
         <Form className="postform">
-        <Form.Group controlId="numone">
+          <Row>
           <h3 className="formheading">Post a volunteer opportunity!</h3>
+          </Row>
+        <Form.Group controlId="numone">
+          
           <Form.Label>Title</Form.Label>
           <Form.Control className="forminput" type="text" placeholder="" />
           <Form.Text className="text-muted">This is what people will see before clicking your post!</Form.Text>
