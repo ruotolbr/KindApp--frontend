@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Landing from "./Components/Landing";
 import OpportunityDetail from "./Components/OpportunityDetail";
+import OpportunityCreate from "./Components/OpportunityCreate";
 import Profile from "./Components/Profile"
 import Nav from "./Components/Nav"
 import { Route } from "react-router-dom";
@@ -37,6 +38,11 @@ function App() {
                     path="/details/:id"
                     exact
                     component={OpportunityDetail}
+                  />
+                  <Route
+                  path="/myposts/"
+                  exact
+                  component={OpportunityCreate}
                   />
                   
                 </main>

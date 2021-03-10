@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Route} from 'react'
+import React, { useState, useEffect, Route } from 'react'
 import OpportunityCard from './OpportunityCard'
 import project from '../APIs/project'
 import { Container, Row, Col } from 'react-bootstrap';
@@ -39,12 +39,7 @@ const LandingPage = ({ posts, setPosts }) => {
                                 <OpportunityCard data={post} />
                             );
                         })}
-
-                    </Row>
-                    <Row>
-                        {/* <OpportunityCard />
-                <OpportunityCard />
-                <OpportunityCard />     */}
+    
                     </Row>
 
 

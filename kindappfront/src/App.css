@@ -49,3 +49,43 @@ input{
   text-align: center;
   margin-top: 10px;
 }
+.formheading{
+  margin-top:7vh;
+  padding-top: 25px;
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  
+}
+.formtitle{
+  margin-top: 10vh;
+  color: black;
+  font-size: 35px;
+  text-align: center;
+
+}
+.forminput{
+  background-color: white;
+  /* opacity: .35; */
+  border: 1px solid black;
+  width: 40vw;
+  margin-bottom: 5px;
+  color: black;
+
+}
+#SI{
+  background-color: transparent; 
+}
+.form-container{
+  /* background-image: url(formpic.jpg); */
+  background-position: center;
+  display: grid;
+}
+.inputcolumn{
+  text-align: left;
+  width: 5vw;
+
+}
+.postform{
+  margin-left: 50vh;
+}
