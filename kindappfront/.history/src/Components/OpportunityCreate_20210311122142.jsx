@@ -20,7 +20,7 @@ function OpportunityCreate({ opp, setOpp }) {
 
   const fetchProjects = async () => {
 
-    var response = await project.get('https://kindapp-backend.herokuapp.com/mykindposts/')
+    var response = await project.get('https://kindapp-backend.herokuapp.com/post/create/')
     setOpp(response.data)
     console.log(response)
 }
@@ -87,7 +87,7 @@ useEffect(() => {
           <Form.Text className="text-muted">What is it that they need help with?</Form.Text>
         </Form.Group>
 
-          <Button variant="primary">Save</Button>
+          <Button variant="primary">Search</Button>
           <Container>
           <Card style={{ width: "18rem" }} className="adding-margin">
       <Card.Img variant="top" src={placeholder} />
@@ -96,16 +96,16 @@ useEffect(() => {
         <Card.Text>
           <section className="container">
            
-              {/* <h3 className="cards-title">{opp.id}</h3> */}
+              <h3 className="cards-title">{opp.title}</h3>
             
           </section>
         </Card.Text> 
-        {/* <Link to={`/post/${opp.id}`} key={opp.id}> */}
+        <Link to={`/posts/${opp.id}`} key={opp.id}>
         <Button className="save-button" variant="dark">
           {" "}
           More Info
         </Button>
-        {/* </Link> */}
+        </Link>
       </Card.Body>
     </Card>
           </Container>

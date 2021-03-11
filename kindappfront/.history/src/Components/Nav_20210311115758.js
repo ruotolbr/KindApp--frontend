@@ -11,11 +11,9 @@ import { useHistory } from "react-router-dom";
 function NavBar() {
 
   const history = useHistory();
-
   const pageChange = () =>{
-    
-    history.push('/myposts')
-    
+    let page = `newPage`;
+    history.push(page)
   }
 
   

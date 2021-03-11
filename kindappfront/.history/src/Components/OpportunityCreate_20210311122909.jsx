@@ -87,7 +87,7 @@ useEffect(() => {
           <Form.Text className="text-muted">What is it that they need help with?</Form.Text>
         </Form.Group>
 
-          <Button variant="primary">Save</Button>
+          <Button variant="primary">Search</Button>
           <Container>
           <Card style={{ width: "18rem" }} className="adding-margin">
       <Card.Img variant="top" src={placeholder} />

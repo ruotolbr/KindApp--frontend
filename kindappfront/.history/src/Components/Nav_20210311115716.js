@@ -11,11 +11,9 @@ import { useHistory } from "react-router-dom";
 function NavBar() {
 
   const history = useHistory();
-
   const pageChange = () =>{
-    
-    history.push('/myposts')
-    
+    let page = `newPage`;
+    history.push(page)
   }
 
   
@@ -25,7 +23,7 @@ function NavBar() {
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
         <a className="nav-link active" aria-current="page" href="home">Home</a>
-        <Link onClick={pageChange} className="nav-link active" aria-current="page" path="/myposts">MyKindPosts</Link>
+        <Link className="nav-link active" aria-current="page" path="/myposts">MyKindPosts</Link>
         <Link className="nav-link active" path="/profile">Profile</Link>
       </div>
       

@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import project from "../APIs/project"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Form, FormGroup, Button, Row, Col, Div, Container, Card} from 'react-bootstrap';
+import {Form, FormGroup, Button, Row, Col, Container} from 'react-bootstrap';
 import "../App.css"
 import formpic from "../formpic.jpg"
-import { Link } from "react-router-dom";
-import placeholder from "../placeholderimg.jpg"
 
 
-function OpportunityCreate({ opp, setOpp }) {
+
+function OpportunityCreate({ posts, setPosts }) {
   const initialState = {
       title: '',
       Cause_type: '', 
@@ -20,8 +19,8 @@ function OpportunityCreate({ opp, setOpp }) {
 
   const fetchProjects = async () => {
 
-    var response = await project.get('https://kindapp-backend.herokuapp.com/mykindposts/')
-    setOpp(response.data)
+    var response = await project.get('https://kindapp-backend.herokuapp.com/post/create/')
+    setPosts(response.data)
     console.log(response)
 }
 
@@ -86,31 +85,9 @@ useEffect(() => {
           <Form.Control className="forminput" type="text" placeholder="" />
           <Form.Text className="text-muted">What is it that they need help with?</Form.Text>
         </Form.Group>
-
-          <Button variant="primary">Save</Button>
-          <Container>
-          <Card style={{ width: "18rem" }} className="adding-margin">
-      <Card.Img variant="top" src={placeholder} />
-      <Card.Body>
-        <Card.Title></Card.Title>
-        <Card.Text>
-          <section className="container">
-           
-              {/* <h3 className="cards-title">{opp.id}</h3> */}
-            
-          </section>
-        </Card.Text> 
-        {/* <Link to={`/post/${opp.id}`} key={opp.id}> */}
-        <Button className="save-button" variant="dark">
-          {" "}
-          More Info
-        </Button>
-        {/* </Link> */}
-      </Card.Body>
-    </Card>
-          </Container>
+          <Button variant="primary">Search</Button>
         </Form>
-        
+
     );
   }
   

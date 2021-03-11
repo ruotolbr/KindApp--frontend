@@ -14,8 +14,7 @@ function NavBar() {
 
   const pageChange = () =>{
     
-    history.push('/myposts')
-    
+    history.push('/post/create')
   }
 
   

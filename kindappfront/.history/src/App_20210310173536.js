@@ -39,7 +39,13 @@ function App() {
                     exact
                     component={OpportunityDetail}
                   />
-                  
+                  <Route 
+                  path="/"
+                  exact 
+                  render={() => {
+                    return <OpportunityCreate posts={posts} setPosts={setPosts} />
+                  }}
+                  />
 
                   <Route
                   path="/myposts/"
