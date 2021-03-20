@@ -124,8 +124,7 @@ function OpportunityCreate({ opp, setOpp }) {
             minLength: {
               value: 3,
               message: "Cause type must be at least 3 characters." 
-            },
-          })}
+            })}
           onChange={setFormState}
           className="forminput"
           type="text"

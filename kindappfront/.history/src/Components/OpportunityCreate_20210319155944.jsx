@@ -84,120 +84,95 @@ function OpportunityCreate({ opp, setOpp }) {
   const { register, handleSubmit, errors } =useForm();
 
   return (
-    <Form className="postform" onSubmit={handleSubmit(onSubmit)}>
+    <Form className="postform" onSubmit={handleSubmit(onSubmit)} >
       <Row>
         <h3 className="formheading">Post a volunteer opportunity!</h3>
       </Row>
       <Form.Group>
         <Form.Label>Title</Form.Label>
-        <Form.Control
-          id="id"
-          value={formState.title}
-          name="Title"
-          ref={register({
-            required: "A post title is required.",
-            minLength: {
-              value: 6,
-              message: "Sorry! Your title isn't long enough. Jazz it up a bit?",
-            },
-          })}
-          onChange={setFormState}
-          className="forminput"
-          type="text"
-          placeholder=""
-        />
+        <Form.Control 
+        id="id" 
+        value={formState.title} 
+        name="Title" 
+        ref={register({ 
+        required: "A post title is required.", 
+        pattern: {
+          minLength: "8",
+          message: "Sorry! Your title isn't long enough. Jazz it up a bit?", 
+        },
+        })} 
+        onChange={setFormState} 
+        className="forminput" 
+        type="text" 
+        placeholder="" />
         <Form.Text className="text-muted">
           This is what people will see before clicking your post!
         </Form.Text>
-        {errors.Title && (
-          <span className="form-error">{errors.Title.message}</span>
-        )}
+        {errors.Title && <span className="form-error">{errors.Title.message}</span>
       </Form.Group>
-
+      
       <Form.Group>
         <Form.Label>Cause Type</Form.Label>
-        <Form.Control
-          value={formState.Cause_type}
-          name="Cause Type"
-          ref={register({ 
-            required: "Cause type is required.", 
-            minLength: {
-              value: 3,
-              message: "Cause type must be at least 3 characters." 
-            },
-          })}
-          onChange={setFormState}
-          className="forminput"
-          type="text"
-          placeholder=""
-        />
+        <Form.Control 
+        value={formState.Cause_type} 
+        name="Cause Type" 
+        ref={register({ required: true, minLength: "3" })} 
+        onChange={setFormState} 
+        className="forminput" 
+        type="text" 
+        placeholder="" />
         <Form.Text className="text-muted">
           Ex: covid-19 relief, fight homelessness, climate change etc.
         </Form.Text>
-        {errors.Cause_type && (
-          <span className="form-error">
-            Cause Type must be min. of 3 characters.
-          </span>
-        )}
+        {errors.Cause_type && <span className="form-error">Cause Type must be min. of 3 characters.</span>}
       </Form.Group>
       <Form.Group>
         <Form.Label>Organization</Form.Label>
-        <Form.Control
-          value={formState.Organization}
-          name="Organization"
-          ref={register({ required: true })}
-          onChange={setFormState}
-          className="forminput"
-          type="text"
-          placeholder=""
-        />
+        <Form.Control 
+        value={formState.Organization} 
+        name="Organization" 
+        ref={register({ required: true })} 
+        onChange={setFormState} 
+        className="forminput" 
+        type="text" 
+        placeholder="" />
         <Form.Text className="text-muted">
           What organization needs our help?
         </Form.Text>
-        {errors.Cause_type && (
-          <span className="form-error">Must have organization name.</span>
-        )}
+        {errors.Cause_type && <span className="form-error">Must have organization name.</span>}
       </Form.Group>
-      <Form.Group>
+      <Form.Group >
         <Form.Label>Website Link</Form.Label>
-        <Form.Control
-          value={formState.Url}
-          name="Website Link"
-          ref={register}
-          onChange={setFormState}
-          className="forminput"
-          type="text"
-          placeholder=""
-        />
+        <Form.Control 
+        value={formState.Url} 
+        name="Website Link" 
+        ref={register} 
+        onChange={setFormState} 
+        className="forminput" 
+        type="text" 
+        placeholder="" />
         <Form.Text className="text-muted">
           What organization needs our help?
         </Form.Text>
       </Form.Group>
       <Form.Group>
         <Form.Label>Description</Form.Label>
-        <Form.Control
-          value={formState.Description}
-          name="Description"
-          ref={register({ required: true, minLength: "8" })}
-          onChange={setFormState}
-          className="forminput"
-          type="text"
-          placeholder=""
-        />
+        <Form.Control 
+        value={formState.Description} 
+        name="Description" 
+        ref={register({ required: true, minLength: "8" })} 
+        onChange={setFormState} 
+        className="forminput" 
+        type="text" 
+        placeholder="" />
         <Form.Text className="text-muted">
           What is it that they need help with?
         </Form.Text>
-        {errors.Cause_type && (
-          <span className="form-error">
-            Your post description is too short! Need more deets!
-          </span>
-        )}
+        {errors.Cause_type && <span className="form-error">Your post description is too short! Need more deets!</span>}
       </Form.Group>
 
-      <Button type="submit" variant="primary">
-        Save
-      </Button>
-
+      <Button type="submit" variant="primary">Save</Button>
+      
       <Container>
         {/* {opp.map((opps) => {
           
@@ -206,25 +181,25 @@ function OpportunityCreate({ opp, setOpp }) {
           }
           
           console.log("opp", opp) */}
-        return (
-        <Card style={{ width: "18rem" }} className="adding-margin">
-          <Card.Img variant="top" src={placeholder} />
-          <Card.Body>
-            <Card.Title></Card.Title>
-            <Card.Text>
-              <section className="container">
-                {/* <h3 className="cards-title">{opps.title}</h3> */}
-              </section>
-            </Card.Text>
-            {/* <Link to={`/post/create/${opps.id}`} key={opps.id}> */}
-            <Button className="save-button" variant="dark">
-              {" "}
-              More Info
-            </Button>
-            {/* </Link> */}
-          </Card.Body>
-        </Card>
-        );
+          return (
+            <Card style={{ width: "18rem" }} className="adding-margin">
+              <Card.Img variant="top" src={placeholder} />
+              <Card.Body>
+                <Card.Title></Card.Title>
+                <Card.Text>
+                  <section className="container">
+                    {/* <h3 className="cards-title">{opps.title}</h3> */}
+                  </section>
+                </Card.Text>
+                {/* <Link to={`/post/create/${opps.id}`} key={opps.id}> */}
+                <Button className="save-button" variant="dark">
+                  {" "}
+                  More Info
+                </Button>
+                {/* </Link> */}
+              </Card.Body>
+            </Card>
+          );
         {/* })} */}
       </Container>
     </Form>

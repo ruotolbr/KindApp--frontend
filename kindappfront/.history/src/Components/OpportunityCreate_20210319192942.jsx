@@ -119,13 +119,7 @@ function OpportunityCreate({ opp, setOpp }) {
         <Form.Control
           value={formState.Cause_type}
           name="Cause Type"
-          ref={register({ 
-            required: "Cause type is required.", 
-            minLength: {
-              value: 3,
-              message: "Cause type must be at least 3 characters." 
-            },
-          })}
+          ref={register({ required: true, minLength: "3" })}
           onChange={setFormState}
           className="forminput"
           type="text"
