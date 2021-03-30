@@ -15,7 +15,7 @@ function NavBar() {
   const history = useHistory();
 
   const homePage = () =>{
-    history.push('/')
+    history.push('/home')
   }
   const myKindPosts = () =>{
     history.push('/post/create/')
@@ -26,14 +26,13 @@ function NavBar() {
   
     return (
         <Nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <div className="container-fluid">          
+  <div className="container-fluid">
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-
-      {/* <a className="nav-link active" aria-current="page" href="home">Home</a> */}
-         <Nav.Link onClick={homePage} className="nav-link active" path="/" component={LandingPage}>Home</Nav.Link>
-         <Nav.Link onClick={myKindPosts} className="nav-link active" aria-current="page" path="/post/create/" component={MyKindPosts}>MyKindPosts</Nav.Link> 
-         <Nav.Link onClick={profile} className="nav-link active" path="/profile" component={Profile}>Profile</Nav.Link> 
+      <a className="nav-link active" aria-current="page" href="home">Home</a>
+         <Link onClick={homePage} className="nav-link active" path="/home" component={LandingPage}>Home</Link>
+         <Link onClick={myKindPosts} className="nav-link active" aria-current="page" path="/post/create/" component={MyKindPosts}>MyKindPosts</Link> 
+         <Link onClick={profile} className="nav-link active" path="/profile" component={Profile}>Profile</Link> 
         
       </div>
       

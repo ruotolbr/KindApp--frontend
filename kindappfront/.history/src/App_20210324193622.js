@@ -12,9 +12,9 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import "./App.css"
 
 
-function App() {
+function App({ props }) {
   const [posts, setPosts] = useState([]);
-  const [opp, setOpp] = useState([]);
+  // const [opp, setOpp] = useState([]);
 
   return (
     <>
@@ -31,7 +31,7 @@ function App() {
                   <Route
                     path="/"
                     exact
-                    render={(props) => {
+                    render={() => {
                       return <Landing posts={posts} setPosts={setPosts} />;
                     }}
                   />

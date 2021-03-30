@@ -33,7 +33,7 @@ function NavBar() {
       {/* <a className="nav-link active" aria-current="page" href="home">Home</a> */}
          <Nav.Link onClick={homePage} className="nav-link active" path="/" component={LandingPage}>Home</Nav.Link>
          <Nav.Link onClick={myKindPosts} className="nav-link active" aria-current="page" path="/post/create/" component={MyKindPosts}>MyKindPosts</Nav.Link> 
-         <Nav.Link onClick={profile} className="nav-link active" path="/profile" component={Profile}>Profile</Nav.Link> 
+         {/* <Link onClick={profile} className="nav-link active" path="/profile" component={Profile}>Profile</Link>  */}
         
       </div>
       

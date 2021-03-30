@@ -33,13 +33,14 @@ function App() {
                     exact
                     render={(props) => {
                       return <Landing posts={posts} setPosts={setPosts} />;
-                    }}
-                  />
+                    }
+                  // />
                   <Route
                     path="/details/:id"
                     exact
                     component={OpportunityDetail}
                   />
+                    
                   {/* <Route
                     path="/post/create/:id"
                     exact

@@ -31,7 +31,7 @@ function App() {
                   <Route
                     path="/"
                     exact
-                    render={(props) => {
+                    render={() => {
                       return <Landing posts={posts} setPosts={setPosts} />;
                     }}
                   />
@@ -40,19 +40,19 @@ function App() {
                     exact
                     component={OpportunityDetail}
                   />
-                  {/* <Route
+                  <Route
                     path="/post/create/:id"
                     exact
                     render={() => {
-                      return <MyKindPosts opp={opp} setOpp={setOpp} />; 
+                      return <OpportunityCreate opp={opp} setOpp={setOpp} />; 
                     }}
-                  /> */}
+                  />
                   
-                  {/* <Route
+                  <Route
                   path="/post/create/"
                   exact
                   component={OpportunityCreate}
-                  /> */}
+                  />
                   
                 </main>
               </Col>

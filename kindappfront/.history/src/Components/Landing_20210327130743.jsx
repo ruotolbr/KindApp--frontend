@@ -10,7 +10,7 @@ const LandingPage = ({ posts, setPosts }) => {
     // const [projectInfo, setProjectInfo] = useState([]);
     const fetchProjects = async () => {
 
-        var response = await project.get('https://kindapp-backend.herokuapp.com/posts')
+        var response = await project.get('https://kindapp-backend.herokuapp.com/')
         setPosts(response.data)
         console.log(response)
     }

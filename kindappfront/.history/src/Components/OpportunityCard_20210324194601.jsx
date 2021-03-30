@@ -11,7 +11,7 @@ function OpportunityCard({ data }) {
 
 
   
-    // const [posts, setPosts] = useState([]);
+  //   const [posts, setPosts] = useState([]);
 
   //   const fetchPosts  = async () =>{
 

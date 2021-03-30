@@ -12,9 +12,9 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import "./App.css"
 
 
-function App() {
+function App({ props }) {
   const [posts, setPosts] = useState([]);
-  const [opp, setOpp] = useState([]);
+  const [opp, setOpp] = useState(props);
 
   return (
     <>
@@ -31,7 +31,7 @@ function App() {
                   <Route
                     path="/"
                     exact
-                    render={(props) => {
+                    render={() => {
                       return <Landing posts={posts} setPosts={setPosts} />;
                     }}
                   />
@@ -40,19 +40,19 @@ function App() {
                     exact
                     component={OpportunityDetail}
                   />
-                  {/* <Route
-                    path="/post/create/:id"
+                  <Route
+                    path="/post/create/myposts"
                     exact
                     render={() => {
-                      return <MyKindPosts opp={opp} setOpp={setOpp} />; 
+                      return <MyKindPosts opps={opp} setOpp={setOpp} />; 
                     }}
-                  /> */}
+                  />
                   
-                  {/* <Route
+                  <Route
                   path="/post/create/"
                   exact
                   component={OpportunityCreate}
-                  /> */}
+                  />
                   
                 </main>
               </Col>

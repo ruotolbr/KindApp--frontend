@@ -39,4 +39,4 @@ function OpportunityDetails(props) {
         );
     }
     
-export default OpportunityDetails;
+    export default OpportunityDetails;

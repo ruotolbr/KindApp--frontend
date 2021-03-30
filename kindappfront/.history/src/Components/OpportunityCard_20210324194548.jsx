@@ -11,18 +11,18 @@ function OpportunityCard({ data }) {
 
 
   
-    // const [posts, setPosts] = useState([]);
+  //   const [posts, setPosts] = useState([]);
 
-  //   const fetchPosts  = async () =>{
+    const fetchPosts  = async () =>{
 
-  //     var response = await project.get('https://kindapp-backend.herokuapp.com/posts/')
-  //     setPosts(response.data)
-  //     console.log(response.data)
-  // }
+      var response = await project.get('https://kindapp-backend.herokuapp.com/posts/')
+      setPosts(response.data)
+      console.log(response.data)
+  }
 
-  // useEffect(()=>{
-  //     fetchPosts()
-  // },[])
+  useEffect(()=>{
+      fetchPosts()
+  },[])
 
   // useEffect(() => {
   // fetch('http://localhost:8000/posts')

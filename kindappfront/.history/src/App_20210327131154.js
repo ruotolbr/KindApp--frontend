@@ -31,7 +31,7 @@ function App() {
                   <Route
                     path="/"
                     exact
-                    render={(props) => {
+                    render={() => {
                       return <Landing posts={posts} setPosts={setPosts} />;
                     }}
                   />
