@@ -94,13 +94,13 @@ function OpportunityCreate({ opp, setOpp }) {
           id="id"
           value={formState.title}
           name="Title"
-          ref={register({
-            required: "A post title is required.",
-            minLength: {
-              value: 6,
-              message: "Sorry! Your title isn't long enough. Jazz it up a bit?",
-            },
-          })}
+          // ref={register({
+          //   required: "A post title is required.",
+          //   minLength: {
+          //     value: 6,
+          //     message: "Sorry! Your title isn't long enough. Jazz it up a bit?",
+          //   },
+          // })}
           onChange={setFormState}
           className="forminput"
           type="text"
@@ -119,13 +119,13 @@ function OpportunityCreate({ opp, setOpp }) {
         <Form.Control
           value={formState.Cause_type}
           name="Cause Type"
-          ref={register({ 
-            required: "Cause type is required.", 
-            minLength: {
-              value: 3,
-              message: "Cause type must be at least 3 characters." 
-            },
-          })}
+          // ref={register({ 
+          //   required: "Cause type is required.", 
+          //   minLength: {
+          //     value: 3,
+          //     message: "Cause type must be at least 3 characters." 
+          //   },
+          // })}
           onChange={setFormState}
           className="forminput"
           type="text"
@@ -213,7 +213,7 @@ function OpportunityCreate({ opp, setOpp }) {
             <Card.Title></Card.Title>
             <Card.Text>
               <section className="container">
-                {/* <h3 className="cards-title">{opps.title}</h3> */}
+                <h3 className="cards-title">{opps.title}</h3>
               </section>
             </Card.Text>
             {/* <Link to={`/post/create/${opps.id}`} key={opps.id}> */}
